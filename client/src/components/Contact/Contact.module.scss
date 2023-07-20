@@ -1,0 +1,60 @@
+.contactContainer {
+  background-color: #2879fe;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  .contactWrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contactDesc {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .contactFormWrapper {
+    display: flex;
+    .contactInput {
+      border: none;
+      height: 40px;
+      border-radius: 5px 0 0 5px;
+      overflow: hidden;
+      padding: 10px 10px;
+      font-size: 14px;
+      font-weight: 400;
+      outline: none;
+    }
+    .contactBtn {
+      border: none;
+      border-radius: 0 5px 5px 0;
+      background-color: #000;
+      color: #fff;
+      font-weight: 500;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+  .contactIconsWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    .contactIcon {
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contactContainer {
+    .contactWrapper {
+      width: 70%;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

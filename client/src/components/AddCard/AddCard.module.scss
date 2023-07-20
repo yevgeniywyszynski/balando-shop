@@ -1,0 +1,86 @@
+.addCard {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  max-height: 550px;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  background-color: #fff;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .addCardTitle {
+    font-size: 20px;
+    font-weight: 500;
+    color: #777;
+    display: inline-block;
+  }
+  .itemCard {
+    display: flex;
+    gap: 20px;
+    .cardImg {
+      width: 80px;
+      height: 100px;
+      object-fit: cover;
+    }
+    .addCardProductDetails {
+      .productCardTitle {
+        font-size: 20px;
+        font-weight: 500;
+        color: #777;
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+      .productCardDesc {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .addProductPrice {
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+    .removeProduct {
+      color: red;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+  .total {
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+  .proceedCheckBtn {
+    width: 70%;
+    background-color: #2879fe;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+  }
+  .resetCard {
+    font-size: 12px;
+    text-transform: capitaliz e;
+    color: red;
+    font-weight: 100;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 800px) {
+  .addCard {
+    top: 40px;
+  }
+}

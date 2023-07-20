@@ -1,0 +1,72 @@
+.footerContainer {
+  margin: 100px 200px 20px 200px;
+  .footerTop {
+    display: flex;
+    gap: 50px;
+    .footerItem {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 10px;
+      text-align: justify;
+      .titleFooter {
+        font-size: 18px;
+        font-weight: 500;
+        color: #555;
+        margin-bottom: 10px;
+      }
+      .footerCategories {
+        color: #777;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+      }
+      .footerDesc {
+        color: #777;
+        font-size: 16px;
+      }
+    }
+  }
+  .footerBottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 50px;
+    .leftFooter {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .footerLogo {
+        color: #2879fe;
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .copyright {
+        font-size: 14px;
+        color: #777;
+      }
+    }
+    .footerRight {
+      .payIconFooter {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .footerContainer {
+    margin: 30px 50px;
+    .footerTop {
+      flex-wrap: wrap;
+    }
+    .footerBottom {
+      display: flex;
+      gap: 30px;
+      flex-direction: column-reverse;
+      .leftFooter {
+        flex-direction: column;
+      }
+    }
+  }
+}

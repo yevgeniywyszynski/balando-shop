@@ -1,0 +1,47 @@
+.cardWrapper {
+  display: flex;
+  width: 650px;
+  margin: 50px auto;
+  gap: 40px;
+  align-items: center;
+  .cardFromWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    .formControl {
+      padding: 10px 15px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      font-size: 14px;
+      font-weight: 400;
+      border-bottom: 1px solid #777;
+    }
+    .cardSubtotal {
+      text-align: end;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .cardPayBtn {
+      border: none;
+      background-color: #55b145;
+      color: #fff;
+      font-size: 16px;
+      padding: 5px;
+      border-radius: 25px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .cardWrapper {
+    width: 100%;
+    flex-direction: column;
+    .cardFromWrapper {
+      padding: 30px 50px;
+    }
+  }
+}

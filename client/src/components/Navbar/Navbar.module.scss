@@ -1,0 +1,138 @@
+.navMenu {
+  height: 80px;
+  .mobile {
+    display: none;
+    .mobileNavBarWrapper {
+      display: flex;
+      gap: 20px;
+      z-index: 17;
+      align-items: center;
+      margin-right: 20px;
+
+      .shopingCarticon {
+        display: flex;
+        position: relative;
+        color: #fff;
+        span {
+          font-size: 12px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #2878fe;
+          color: #fff;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          right: -10px;
+          top: -5px;
+        }
+      }
+    }
+    .burger {
+      position: absolute;
+      z-index: 8;
+      right: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      .burgerMenuIcon {
+        color: #fff;
+        font-size: 40px;
+        position: static;
+      }
+    }
+  }
+  .navWrapper {
+    padding: 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    .navItem {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 16px;
+      .navLink {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+    .navLeft {
+      display: flex;
+      gap: 25px;
+      .navSelectContainer {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        .selectWrapper {
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+    .navCenter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #000;
+      .logo {
+        margin: 0px 20px;
+      }
+    }
+    .shopingCarticon {
+      position: relative;
+      span {
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #2878fe;
+        color: #fff;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: -10px;
+        top: -10px;
+      }
+    }
+    .navRight {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      .navIconsContainer {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: #777;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*BUREGR*/
+
+@media (max-width: 900px) {
+  .navLeft {
+    .navItem {
+      display: none !important;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .navMenu {
+    height: 40px;
+    z-index: 999;
+    position: static;
+    top: 0;
+    background-color: #777;
+    .navWrapper {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
+}

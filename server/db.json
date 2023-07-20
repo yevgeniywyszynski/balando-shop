@@ -1,0 +1,142 @@
+{
+  "data": [
+    {
+      "id": 14,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/KURTKA%20I20911A00132%20549SK-779/up/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/KURTKA%20I20911A00132%20549SK-779/up/3.jpg"
+      ],
+      "trendingImages": [],
+      "title": "MONCLER",
+      "price": 230,
+      "oldPrice": null,
+      "isNew": true,
+      "campaigns": ["men", "new"],
+      "featuredProduct": false,
+      "dataTrending": true,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "tisherts"
+    },
+    {
+      "id": 122,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/TORBA%20BB7289%20AW576-80402/lg/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/TORBA%20BB7337%20AW576-80402/up/2.jpg"
+      ],
+      "title": "BALENCIAGA",
+      "price": 640,
+      "oldPrice": null,
+      "isNew": true,
+      "campaigns": [],
+      "featuredProduct": false,
+      "dataTrending": true,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "tisherts"
+    },
+    {
+      "id": 214,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/T-SHIRT%20FD65TS008%204SG-02/up/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/T-SHIRT%20FD65TS008%204SG-02/up/3.jpg"
+      ],
+      "title": "KENZO",
+      "price": 2200,
+      "oldPrice": null,
+      "isNew": true,
+      "campaigns": ["new", "men"],
+      "featuredProduct": false,
+      "dataTrending": true,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "tisherts"
+    },
+    {
+      "id": 114,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/SPODNIE%20FTAQ5D%20G8GF5-S9001/lg/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/SPODNIE%20FTAQ5D%20G8GF5-S9001/lg/1.jpg"
+      ],
+      "title": "DOLCE & GABBANA",
+      "price": 530,
+      "oldPrice": null,
+      "isNew": true,
+      "campaigns": ["new", "women"],
+      "featuredProduct": false,
+      "dataTrending": true,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "tisherts"
+    },
+    {
+      "id": 128,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/CZAPKA%2075YAZK44%20ZG197-899/up/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/CZAPKA%2075GAZK40%20ZG020-L01/up/2.jpg"
+      ],
+      "title": "VERSACE",
+      "price": 3280,
+      "oldPrice": 12320,
+      "isNew": false,
+      "campaigns": ["accessories", "men", "sale"],
+      "featuredProduct": true,
+      "dataTrending": false,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "tisherts"
+    },
+    {
+      "id": 15,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/BUTY%20CK1587%20AH527-8B979/lg/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/BUTY%20CK1587%20AH527-8B979/up/1.JPG"
+      ],
+      "title": "DOLCE & GABBANA",
+      "price": 409,
+      "oldPrice": null,
+      "isNew": true,
+      "campaigns": ["new", "shoes"],
+      "featuredProduct": true,
+      "dataTrending": false,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "shoes"
+    },
+    {
+      "id": 16,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/BUTY%20CG0680%20A1037-8I484/up/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/BUTY%20CG0680%20A1037-8I484/up/3.jpg"
+      ],
+      "title": "DOLCE & GABBANA",
+      "price": 295,
+      "oldPrice": null,
+      "isNew": true,
+      "campaigns": ["shoes", "new"],
+      "featuredProduct": true,
+      "dataTrending": false,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "shoes"
+    },
+    {
+      "id": 17,
+      "imgList": [
+        "https://img.vitkac.com/uploads/partner/lv/M46126/up/M46126_PM1_Ambiance%20view.jpg",
+        "https://img.vitkac.com/uploads/partner/lv/M46126/up/M46126_PM1_Worn%20view.jpg"
+      ],
+      "title": "LOUS VUITTON",
+      "price": 1890,
+      "oldPrice": 1329,
+      "isNew": false,
+      "campaigns": ["sale"],
+      "featuredProduct": true,
+      "dataTrending": false,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "bags"
+    }
+  ],
+  "transaction": []
+}

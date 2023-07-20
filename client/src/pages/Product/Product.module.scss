@@ -1,0 +1,120 @@
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 20px 50px;
+  .productLeft {
+    display: flex;
+    gap: 20px;
+    .images {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    }
+    .mainImg {
+      .generalImgProduct {
+        width: 100%;
+        max-height: 700px;
+        object-fit: cover;
+      }
+    }
+  }
+  .productRight {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .productRightTitle {
+      font-size: 24px;
+      font-weight: 800;
+    }
+    .productPrice {
+      color: #2879fe;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .prodcutDesc {
+      text-align: justify;
+      font-weight: 300;
+      line-height: 25px;
+    }
+    .qtyContainer {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      .qtyBtn {
+        padding: 10px 15px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .qtyIcon {
+        color: #777;
+      }
+      span {
+        color: #777;
+      }
+    }
+    .addToShopWrapper {
+      background-color: #2879fe;
+      width: max-content;
+      padding: 5px 50px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 14px;
+      gap: 10px;
+      cursor: pointer;
+      .addShowText {
+        text-transform: uppercase;
+      }
+    }
+    .productIconsContainer {
+      display: flex;
+      gap: 20px;
+      color: #2879fe;
+      .productIconWrapper {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-transform: uppercase;
+        font-size: 14px;
+        .favoIconProduct {
+          color: red;
+        }
+      }
+    }
+    .productInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 300;
+      border-bottom: 1px solid #777;
+      padding-bottom: 30px;
+    }
+    .productInfoDesc {
+      font-size: 14px;
+      width: max-content;
+      text-transform: uppercase;
+      color: #777;
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .product {
+    grid-template-columns: 1fr;
+  }
+}
