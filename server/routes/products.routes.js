@@ -14,7 +14,6 @@ router.get("/products", (req, res) => {
   // chain of responsibility
   let filtered = dataBase.data;
 
-  /*do obgadania*/
   if (pharse) {
     filtered = filtered.filter((e) =>
       e.title.toLowerCase().includes(pharse.toLowerCase())
@@ -62,7 +61,7 @@ router.get("/products", (req, res) => {
           filterArray.push(e);
         }
       });
-    }); // O(n*m)
+    });
 
     //checking obj length
     let objLength = Object.keys(filterArray).length;
