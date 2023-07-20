@@ -9,8 +9,7 @@ const AddCard = () => {
 
   const resetCart = () => {
     dataCard.setData(dataCard.data.map((e) => ({ ...e, count: 0 })));
-    dataCard.setSubtotal({ finalPrice: 0, addProducts: [], count: 0 }); // 1kolejka 3wykona
-    console.log("resetOperation", dataCard.subtotal); // 2wykona
+    dataCard.setSubtotal({ finalPrice: 0, addProducts: [], count: 0 });
   };
 
   const removeProduct = (product) => {
@@ -33,8 +32,6 @@ const AddCard = () => {
       ),
       count: dataCard.subtotal.count - product.count,
     });
-
-    console.log("removeOperation", dataCard.subtotal);
   };
 
   return (

@@ -136,6 +136,74 @@
       "count": 0,
       "inShopCart": false,
       "productCategory": "bags"
+    },
+    {
+      "id": 18,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20PWBB022E23%20FLE001-0305/up/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20PWBB022E23%20FLE001-0305/up/4.jpg"
+      ],
+      "title": "PALM ANGELS",
+      "price": 2229,
+      "oldPrice": null,
+      "isNew": false,
+      "campaigns": ["women"],
+      "featuredProduct": false,
+      "dataTrending": false,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "hoodie"
+    },
+    {
+      "id": 19,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20PWBB022C99%20FLE001-1060/up/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20PWBB022C99%20FLE001-1060/up/3.jpg"
+      ],
+      "title": "PALM ANGELS",
+      "price": 2045,
+      "oldPrice": null,
+      "isNew": false,
+      "campaigns": ["women"],
+      "featuredProduct": false,
+      "dataTrending": false,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "hoodie"
+    },
+    {
+      "id": 20,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20BWJ03%20M3YAC-499/up/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20BWJ03%20M3YAC-499/up/3.jpg"
+      ],
+      "title": "GIVENCHY",
+      "price": 3599,
+      "oldPrice": null,
+      "isNew": false,
+      "campaigns": ["women"],
+      "featuredProduct": false,
+      "dataTrending": false,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "hoodie"
+    },
+    {
+      "id": 21,
+      "imgList": [
+        "https://img.vitkac.com/uploads/product_thumb/KAMIZELKA%20717547%20Z9AAT-2184/up/2.jpg",
+        "https://img.vitkac.com/uploads/product_thumb/KAMIZELKA%20717547%20Z9AAT-2184/up/3.jpg"
+      ],
+      "title": "GUCCI",
+      "price": 9499,
+      "oldPrice": null,
+      "isNew": false,
+      "campaigns": ["women"],
+      "featuredProduct": false,
+      "dataTrending": false,
+      "count": 0,
+      "inShopCart": false,
+      "productCategory": "hoodie"
     }
   ],
   "transaction": []

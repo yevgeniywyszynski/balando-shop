@@ -6,10 +6,11 @@ const Products = () => {
   const [maxPrice, setMaxPrice] = useState(10000);
   const [minPrice, setMiPrice] = useState(100);
   const [sort, setSort] = useState(null);
-  const [categoryFilters, setCategoryFilters] = useState([]); /*(new Set())*/
+  const [categoryFilters, setCategoryFilters] = useState([]);
 
-  let categories = ["tisherts", "shoes", "bags"];
+  let categories = ["tisherts", "shoes", "bags", "hoodie"];
 
+  // other tag solutions + (new Set() in useState
   // const updateFilters = (checked, categoryFilter) => {
   //   if (checked)
   //     setcategoryFilters((prev) => new Set(prev).add(categoryFilter));
@@ -25,7 +26,6 @@ const Products = () => {
     if (checked) {
       if (!categoryFilters.includes(categoryFilter)) {
         setCategoryFilters((prev) => [...prev, categoryFilter]);
-        console.log("addTag", categoryFilters);
       }
     }
     if (!checked) {

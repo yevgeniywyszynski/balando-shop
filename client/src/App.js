@@ -10,7 +10,6 @@ import PaymentType from "./components/PaymentType/PaymentType";
 
 function App() {
   const [data, setData] = useState([]);
-  const [filteredNames, setFilteredNames] = useState([]);
   const [searchPhrase, setSearchPhrase] = useState("");
   const [subtotal, setSubtotal] = useState({
     finalPrice: 0,
@@ -38,8 +37,6 @@ function App() {
         setData,
         subtotal,
         setSubtotal,
-        filteredNames,
-        setFilteredNames,
         searchPhrase,
         setSearchPhrase,
       }}

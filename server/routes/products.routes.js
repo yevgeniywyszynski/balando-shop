@@ -14,16 +14,11 @@ router.get("/products", (req, res) => {
   // chain of responsibility
   let filtered = dataBase.data;
 
-  console.log("pharse", pharse);
-  console.log("sort", sort);
-
   /*do obgadania*/
   if (pharse) {
-    console.log("wchodze");
     filtered = filtered.filter((e) =>
       e.title.toLowerCase().includes(pharse.toLowerCase())
     );
-    console.log("filtered", filtered);
   }
 
   if (sort) {
@@ -44,7 +39,6 @@ router.get("/products", (req, res) => {
 
   if (maxPrice) {
     filtered = filtered.filter((e) => e.price <= maxPrice);
-    console.log("maxPriceFiltered", maxPrice);
   }
 
   if (minPrice) {
@@ -53,7 +47,6 @@ router.get("/products", (req, res) => {
 
   if (filters) {
     let res = [];
-    console.log(filters);
     //formating objcet and split string for ones element
     for (let key in filters) {
       let elem = filters[key].split(",");
@@ -78,7 +71,6 @@ router.get("/products", (req, res) => {
     }
   }
 
-  console.log("filtered", filtered);
   res.json(filtered);
   return;
 });
@@ -86,7 +78,6 @@ router.get("/products", (req, res) => {
 router.get("/product/:id", (req, res) => {
   let findProductId = req.params.id;
   let product = dataBase.data.find((item) => item.id == findProductId);
-  console.log("findId", product);
   res.json(product);
   return;
 });

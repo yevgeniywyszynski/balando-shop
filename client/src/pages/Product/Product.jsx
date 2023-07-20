@@ -18,8 +18,6 @@ const Product = () => {
   const [currentProduct, setCurrentProduc] = useState(null);
   const [error, setError] = useState(false);
 
-  console.log("favoriteProduct", favorite);
-
   const addFavorite = () => {
     setFavotire(!favorite);
   };
