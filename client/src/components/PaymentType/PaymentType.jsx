@@ -15,12 +15,28 @@ const PaymentType = () => {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [payStatus, setPayStatus] = useState(false);
+  const [errorUserFrom, setErrorUserForm] = useState(false);
   const navigate = useNavigate();
 
   const dataCard = useContext(DataContext);
 
   const payid = (e) => {
+    console.log("expiry", expiry);
     e.preventDefault();
+
+    //date formating
+    let objectDate = new Date();
+    let fullYear = objectDate.getFullYear();
+    let actualityMonth = objectDate.getMonth() + 1;
+    if (actualityMonth < 9) {
+      actualityMonth = "0" + actualityMonth;
+    } else {
+      actualityMonth = actualityMonth + "";
+    }
+    let yearString = fullYear + "";
+    let actualityShortYear = yearString.slice(-2);
+    let userCardExpirationYear = expiry.split("/")[1];
+    let userCardExpirationMonth = expiry.split("/")[0];
 
     if (dataCard.subtotal.finalPrice === 0) {
       return alert("koszyk jest pusty, dodaj produkt");
@@ -30,8 +46,23 @@ const PaymentType = () => {
       return alert("wpisz poprawnie numer karty");
     }
 
+    if (
+      userCardExpirationYear < actualityShortYear ||
+      userCardExpirationMonth <= actualityMonth
+    ) {
+      return alert("twoja karta stracila waznosc");
+    }
+
+    if (!cvc) {
+      return alert("CCV jest wymagany");
+    }
+
     if (!email) {
+      setErrorUserForm(true);
       return alert("email jest wymagany");
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+      setErrorUserForm(true);
+      return alert("error type email adress");
     }
 
     let paymentUserData = {
@@ -39,9 +70,10 @@ const PaymentType = () => {
       name: name,
       subtotal: dataCard.subtotal.finalPrice,
       number: number,
+      purchasedProducts: dataCard.subtotal.addProducts,
     };
 
-    axios.post("http://localhost:8080/transaction/payment", paymentUserData);
+    axios.post("http://localhost:8080/api/payment", paymentUserData);
 
     setPayStatus(true);
     dataCard.setSubtotal({ finalPrice: 0, addProducts: [], count: 0 });
@@ -106,7 +138,9 @@ const PaymentType = () => {
             />
             <input
               type="email"
-              className={styles.formControl}
+              className={
+                errorUserFrom ? styles.formControlError : styles.formControl
+              }
               value={email}
               placeholder="Email"
               onChange={(e) => {

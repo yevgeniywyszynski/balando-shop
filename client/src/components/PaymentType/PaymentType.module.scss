@@ -16,7 +16,18 @@
       background-color: transparent;
       font-size: 14px;
       font-weight: 400;
-      border-bottom: 1px solid #777;
+      border: 1px solid #777;
+    }
+
+    .formControlError {
+      padding: 10px 15px;
+      outline: none;
+      border: none;
+      color: #c44646;
+      background-color: transparent;
+      font-size: 14px;
+      font-weight: 400;
+      border: 1px solid #c44646;
     }
     .cardSubtotal {
       text-align: end;

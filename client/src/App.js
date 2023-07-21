@@ -7,6 +7,7 @@ import axios from "axios";
 import Products from "./pages/Products/Products";
 import { DataContext } from "./context/DataContext";
 import PaymentType from "./components/PaymentType/PaymentType";
+//import PaymentFormik from "./components/PaymentFormik/PaymentFormik";
 
 function App() {
   const [data, setData] = useState([]);
@@ -46,9 +47,9 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<Product />} />
-            {/* <Route path="/search" element={<Search />} /> */}
             <Route path="/products" element={<Products />} />
             <Route path="/payment" element={<PaymentType />} />
+            {/* <Route path="/payment" element={<PaymentFormik />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
