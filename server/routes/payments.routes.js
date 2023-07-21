@@ -6,7 +6,7 @@ const dataBase = { ...db };
 
 router.post("/payment", (req, res) => {
   try {
-    let { email, name, subtotal, number } = req.body;
+    let { email, name, subtotal, number, purchasedProducts } = req.body;
 
     let newTransactionObj = {
       id: uuidv1(),
@@ -14,6 +14,7 @@ router.post("/payment", (req, res) => {
       name: name,
       subtotal: subtotal,
       number: number,
+      purchasedProducts: purchasedProducts,
     };
 
     dataBase.transaction = [...dataBase.transaction, newTransactionObj];
