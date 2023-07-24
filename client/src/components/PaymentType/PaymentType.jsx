@@ -45,10 +45,11 @@ const PaymentType = () => {
     if (number.length < 16) {
       return alert("wpisz poprawnie numer karty");
     }
-
+    debugger;
     if (
       userCardExpirationYear < actualityShortYear ||
-      userCardExpirationMonth <= actualityMonth
+      (userCardExpirationYear == actualityShortYear &&
+        userCardExpirationMonth <= actualityMonth)
     ) {
       return alert("twoja karta stracila waznosc");
     }
