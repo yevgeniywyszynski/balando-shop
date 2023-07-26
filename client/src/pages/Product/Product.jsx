@@ -14,21 +14,35 @@ import axios from "axios";
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(0);
   const [qty, setQty] = useState(1);
-  const [favorite, setFavotire] = useState(false);
+  const [favorite, setFavotire] = useState([]);
   const [currentProduct, setCurrentProduc] = useState(null);
   const [error, setError] = useState(false);
-
-  const addFavorite = () => {
-    setFavotire(!favorite);
-  };
-
   const urlProductId = parseInt(useParams().id);
   const dataCard = useContext(DataContext);
+
+  const addFavorite = () => {
+    let stateLocalStorage = localStorage.getItem("favourites") || "[]";
+
+    let isArray = JSON.parse(stateLocalStorage);
+    if (isArray.includes(currentProduct.id)) {
+      let removeProduct = isArray.indexOf(currentProduct.id);
+      isArray.splice(removeProduct, 1);
+      localStorage.setItem("favourites", JSON.stringify(isArray));
+    } else {
+      localStorage.setItem(
+        "favourites",
+        JSON.stringify([...isArray, currentProduct.id])
+      );
+    }
+
+    setFavotire(JSON.parse(localStorage.getItem("favourites")));
+  };
 
   useEffect(() => {
     getProduct().then((resp) => {
       setCurrentProduc(resp);
     });
+    setFavotire(JSON.parse(localStorage.getItem("favourites")));
   }, []);
 
   const getProduct = async () => {
@@ -127,7 +141,7 @@ const Product = () => {
             </div>
             <div className={styles.productIconsContainer}>
               <div className={styles.productIconWrapper} onClick={addFavorite}>
-                {favorite ? (
+                {favorite.includes(currentProduct?.id) ? (
                   <FavoriteIcon className={styles.favoIconProduct} />
                 ) : (
                   <FavoriteBorderIcon />

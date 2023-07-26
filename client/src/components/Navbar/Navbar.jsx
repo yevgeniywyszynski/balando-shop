@@ -124,7 +124,9 @@ const Navbar = () => {
             {openSearch ? <SearchPlaceholder /> : null}
             <SearchIcon onClick={() => setOpenSearch(!openSearch)} />
             <PersonOutlineOutlinedIcon />
-            <FavoriteBorderOutlinedIcon />
+            <Link className={styles.navLink} to="/favoritelist">
+              <FavoriteBorderOutlinedIcon className={styles.favNavIcon} />
+            </Link>
             <div
               className={styles.shopingCarticon}
               onClick={() => setOpenCard(!openCard)}

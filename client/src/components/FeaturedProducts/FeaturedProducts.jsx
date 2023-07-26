@@ -1,10 +1,23 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./FeaturedProducts.module.scss";
 import ItemCard from "../ItemCard/ItemCard";
-import { DataContext } from "../../context/DataContext";
+import axios from "axios";
 
 const FeaturedProducts = ({ type }) => {
-  const contextAppData = useContext(DataContext);
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    try {
+      const { data } = await axios.get("http://localhost:8080/api/products");
+      setFeaturedProducts(data);
+    } catch (e) {
+      console.log("error message", e.messages);
+    }
+  };
 
   return (
     <div className={styles.featuredProductsContainer}>
@@ -19,7 +32,7 @@ const FeaturedProducts = ({ type }) => {
       </div>
       {type === "trending" ? (
         <div className={styles.featuredBottom}>
-          {contextAppData.data
+          {featuredProducts
             .filter((product) => product.dataTrending)
             .map((item) => (
               <ItemCard item={item} key={item.id} />
@@ -27,7 +40,7 @@ const FeaturedProducts = ({ type }) => {
         </div>
       ) : (
         <div className={styles.featuredBottom}>
-          {contextAppData.data
+          {featuredProducts
             .filter((product) => product.featuredProduct)
             .map((item) => (
               <ItemCard item={item} key={item.id} />

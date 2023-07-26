@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../src/components/Layout/Layout";
 import Home from "../src/pages/Home/Home";
 import Product from "./pages/Product/Product";
-import axios from "axios";
 import Products from "./pages/Products/Products";
 import { DataContext } from "./context/DataContext";
 import PaymentType from "./components/PaymentType/PaymentType";
+import FavoriteListProducts from "./components/FavoriteListProducts/FavoriteListProducts";
 
 function App() {
   const [data, setData] = useState([]);
@@ -16,19 +16,6 @@ function App() {
     addProducts: [],
     count: 0,
   });
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = async () => {
-    try {
-      const { data } = await axios.get("http://localhost:8080/api/products");
-      setData(data);
-    } catch (e) {
-      console.error(e);
-    }
-  };
 
   return (
     <DataContext.Provider
@@ -48,6 +35,7 @@ function App() {
             <Route path="/product/:id" element={<Product />} />
             <Route path="/products" element={<Products />} />
             <Route path="/payment" element={<PaymentType />} />
+            <Route path="/favoritelist" element={<FavoriteListProducts />} />
           </Route>
         </Routes>
       </BrowserRouter>
