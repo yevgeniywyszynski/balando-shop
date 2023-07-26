@@ -13,7 +13,6 @@ router.get("/products", (req, res) => {
   let filterArray = [];
   // chain of responsibility
   let filtered = dataBase.data;
-
   if (pharse) {
     filtered = filtered.filter((e) =>
       e.title.toLowerCase().includes(pharse.toLowerCase())
@@ -79,6 +78,30 @@ router.get("/product/:id", (req, res) => {
   let product = dataBase.data.find((item) => item.id == findProductId);
   res.json(product);
   return;
+});
+
+router.get("/favoritelist", (req, res) => {
+  const favorite = req.query.favorite;
+  let products = dataBase.data;
+  let favoriteIdArray = [];
+  let favoriteProductList = [];
+
+  for (let key in favorite) {
+    let elem = favorite[key].split(",");
+    elem.forEach((e) => {
+      favoriteIdArray.push(e);
+    });
+  }
+
+  products.forEach((product) => {
+    favoriteIdArray.forEach((id) => {
+      if (product.id == id) {
+        favoriteProductList.push(product);
+      }
+    });
+  });
+
+  return res.json(favoriteProductList);
 });
 
 module.exports = router;
